@@ -92,9 +92,69 @@ export default function Home() {
     }, []);
 
 
+    //video section
+
+    const videos = [
+        // <iframe width="356" height="634" src="https://www.youtube.com/embed/idUIVrTEufg" title="Stunning Living Room &amp; Dining Area makeover ✨ #homfurniture #interior #interiordesign #home #dream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
+        "/videos/clip1.mp4",
+        "/videos/clip2.mp4", 
+        "/videos/clip3.mp4", 
+        "/videos/clip7.mp4", 
+        "/videos/clip8.mp4", 
+    ];
+
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const videoContainerRef = useRef(null);
+
+    // Auto-scroll functionality for videos
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (currentVideoIndex < videos.length - 1) {
+                scrollToVideo(currentVideoIndex + 1);
+            }
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [currentVideoIndex]);
+
+    // Scroll to a specific video
+    const scrollToVideo = (index) => {
+        const container = videoContainerRef.current;
+        if (container) {
+            if (index < videos.length) {
+                container.scrollTo({
+                    top: index * window.innerHeight,
+                    behavior: "smooth",
+                });
+                setCurrentVideoIndex(index);
+            }
+        }
+    };
+
+    // Handle manual scrolling for the video section
+    useEffect(() => {
+        const handleScroll = () => {
+            const container = videoContainerRef.current;
+            if (container) {
+                const scrollPosition = container.scrollTop;
+                const screenHeight = window.innerHeight;
+
+                const newIndex = Math.round(scrollPosition / screenHeight);
+                if (newIndex !== currentVideoIndex && newIndex < videos.length) {
+                    setCurrentVideoIndex(newIndex);
+                }
+            }
+        };
+
+        const container = videoContainerRef.current;
+        container.addEventListener("scroll", handleScroll);
+
+        return () => container.removeEventListener("scroll", handleScroll);
+    }, [currentVideoIndex]);
 
 
-     
+
+
     return (
         <div id='sec1'>
 
@@ -109,7 +169,7 @@ export default function Home() {
                 </div>
 
                 <nav className={isNavVisible ? 'show' : ''}>
-                    <Link to='/' style={{ color: 'green', fontWeight: 'bold' }}>HOME</Link>
+                    <Link to='/' style={{ color: 'green', fontWeight: 'bold' }}>Home</Link>
                     <Link to='/projects'>Projects</Link>
                     <Link to='/services'>Services</Link>
                     <Link to='/aboutUs'>About us</Link>
@@ -136,13 +196,32 @@ export default function Home() {
 
             </header>
 
-
+{/* 
             <div className="home-sec1">
                 <h1>Step Inside RangRag intirior studio !!</h1>
 
                 <p>Whether you’re planning a cozy home makeover or envisioning a luxurious commercial project, our expertise <br /> in modern interiors and cutting-edge 3D visualization ensures your design dreams become a reality.</p>
                 <h1 >✨ Explore. Inspire. Create. ✨</h1>
+            </div> */}
+
+            <div className="sec-1-vid" >
+
+                <div ref={videoContainerRef} className="video-container" >
+
+                    {videos.map((video, index) => (
+
+                        <div key={index} className="video-show">
+                            <video height="100%" width="100%" autoPlay loop muted>
+                                <source src={video} type="video/mp4" />
+                            </video>
+                        </div>
+
+                    ))}
+
+
+                </div>
             </div>
+
 
 
             <div className="sec2">
