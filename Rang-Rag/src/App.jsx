@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Home from './components/Home'
-import Loder from './components/Loder'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Projects from './components/Projects';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
+import Loder from './components/LOder';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ export default function App() {
     <div>
       {
         loading ? (
-          <Loder />
+          <Loder/>
         ) :
           (
             <div className="fade-in">

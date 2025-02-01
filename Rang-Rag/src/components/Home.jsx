@@ -91,8 +91,10 @@ export default function Home() {
 
     }, []);
 
-    
 
+
+
+     
     return (
         <div id='sec1'>
 
@@ -107,7 +109,7 @@ export default function Home() {
                 </div>
 
                 <nav className={isNavVisible ? 'show' : ''}>
-                    <Link to='/' style={{ color: 'green', fontWeight: 'bold' }}>Home</Link>
+                    <Link to='/' style={{ color: 'green', fontWeight: 'bold' }}>HOME</Link>
                     <Link to='/projects'>Projects</Link>
                     <Link to='/services'>Services</Link>
                     <Link to='/aboutUs'>About us</Link>
@@ -141,8 +143,6 @@ export default function Home() {
                 <p>Whether you’re planning a cozy home makeover or envisioning a luxurious commercial project, our expertise <br /> in modern interiors and cutting-edge 3D visualization ensures your design dreams become a reality.</p>
                 <h1 >✨ Explore. Inspire. Create. ✨</h1>
             </div>
-
-        
 
 
             <div className="sec2">
