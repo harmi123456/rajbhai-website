@@ -6,7 +6,9 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
-import Loder from './components/LOder';
+import Loder from './components/Loding';
+import Loding from './components/Loding';
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +26,7 @@ export default function App() {
     <div>
       {
         loading ? (
-          <Loder/>
+          <Loding/>
         ) :
           (
             <div className="fade-in">

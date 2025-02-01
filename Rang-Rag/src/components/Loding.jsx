@@ -1,8 +1,7 @@
 import React from 'react'
 
-export default function Loder() {
+export default function Loding() {
     return (
-
         <div>
             <div className="loader">
 
@@ -21,6 +20,5 @@ export default function Loder() {
 
             </div>
         </div>
-
     )
 }
