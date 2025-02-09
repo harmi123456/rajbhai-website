@@ -581,7 +581,7 @@ export default function Projects() {
 
   const folders = {
 
-    "2BHK Ahmedabad": {
+    AhmedabadHaven : {
       images: [
         "/residential/pr-1-2bhk.png",
         "/residential/pr-2-2bhk.png",
@@ -596,7 +596,7 @@ export default function Projects() {
 
     },
 
-    "3BHK Ahmedabad": {
+    AMD_DreamSpace: {
       images: [
         "/residential/pr-1-3bhk.png",
         "/residential/pr-2-3bhk.png",
@@ -633,7 +633,7 @@ export default function Projects() {
       folderImage: "/residential/pr-bar-1 (7).png"
     },
 
-    "Vadodara Office": {
+    VadodaraBizNest : {
       images: [
         "/corporate/r-1.jpg",
         "/corporate/r-2.jpg",
@@ -678,7 +678,7 @@ export default function Projects() {
     },
 
 
-    "New Homes": {
+    HavenX : {
       images: [
         "/home/1.png",
         "/home/2.png",
@@ -696,7 +696,7 @@ export default function Projects() {
     },
 
 
-    "Home 2": {
+    ZenNest : {
       images: [
         "/home2/1.png",
         "/home2/3.png",
@@ -719,7 +719,7 @@ export default function Projects() {
 
 
 
-    "Rajsthan": {
+    "Heritage Home": {
       images: [
         "/rajsthan/1.png",
         "/rajsthan/2.png",
@@ -738,7 +738,7 @@ export default function Projects() {
       folderImage: "/rajsthan/5.png",
     },
 
-    "Surat Office": {
+    SuratHub : {
       images: [
         "/corporate/1-1.jpg",
         "/corporate/2-1.jpg",
@@ -751,7 +751,7 @@ export default function Projects() {
     },
 
 
-    "Home": {
+    Homix : {
       images: [
         "/home2/a13.png",
         "/home2/b2.png",
