@@ -628,35 +628,140 @@ export default function Projects() {
         "/residential/pr-bar-1 (6).png",
         "/residential/pr-bar-1 (7).png",
         "/residential/pr-bar-1 (8).png",
-        
+
       ],
       folderImage: "/residential/pr-bar-1 (7).png"
     },
 
-    Office: {
+    "Vadodara Office": {
       images: [
-        "/corporate/1-1.jpg",
-        "/corporate/2.jpg",
-        "/corporate/2-1.jpg",
-        "/corporate/3.jpg",
-        "/corporate/3-1.jpg",
-        "/corporate/4.2.2.jpg",
-        "/corporate/4-1.jpg",
-        "/corporate/5.jpg",
-        "/corporate/5-1.jpg",
-        "/corporate/13.jpg",
-        "/corporate/15.jpg",
-        "/corporate/6-1.jpg",
+        "/corporate/r-1.jpg",
         "/corporate/r-2.jpg",
-        "/corporate/r-3.jpg",
         "/corporate/r-5.jpg",
         "/corporate/r-7.jpg",
         "/corporate/r-8.jpg",
         "/corporate/r-11.jpg",
         "/corporate/r-13.jpg",
         "/corporate/r-14.jpg",
+        "/corporate/r-3.jpg",
       ],
       folderImage: "/corporate/1.jpg",
+    },
+
+    RentGuruz: {
+      images: [
+        "/corporate/15.jpg",
+        "/corporate/c1.jpg",
+        "/corporate/C2.jpg",
+        "/corporate/14.jpg",
+        "/corporate/13.jpg",
+        "/corporate/6.jpg",
+      ],
+      folderImage: "/corporate/6.jpg",
+    },
+
+
+    "Patan Prime Homes": {
+      images: [
+        "/patan/2.png",
+        "/patan/3.png",
+        "/patan/4.png",
+        "/patan/5.png",
+        "/patan/6.png",
+        "/patan/7.png",
+        "/patan/8.png",
+        "/patan/9.png",
+        "/patan/10.png",
+        "/patan/11.png",
+      ],
+      folderImage: "/patan/1.png",
+    },
+
+
+    "New Homes": {
+      images: [
+        "/home/1.png",
+        "/home/2.png",
+        "/home/3.png",
+        "/home/4.png",
+        "/home/5.png",
+        "/home/6.png",
+        "/home/7.png",
+        "/home/8.png",
+        "/home/9.png",
+        "/home/10.png",
+        "/home/11.png",
+      ],
+      folderImage: "/home/6.png",
+    },
+
+
+    "Home 2": {
+      images: [
+        "/home2/1.png",
+        "/home2/3.png",
+        "/home2/4.png",
+        "/home2/5.png",
+        "/home2/6.png",
+        "/home2/7.png",
+        "/home2/8.png",
+        "/home2/9.png",
+        "/home2/10.png",
+        "/home2/11.png",
+        "/home2/12.png",
+        "/home2/13.png",
+        "/home2/14.png",
+        "/home2/15.png",
+        "/home2/16.png",
+      ],
+      folderImage: "/home2/2.png",
+    },
+
+
+
+    "Rajsthan": {
+      images: [
+        "/rajsthan/1.png",
+        "/rajsthan/2.png",
+        "/rajsthan/3.png",
+        "/rajsthan/4.png",
+        "/rajsthan/5.png",
+        "/rajsthan/6.png",
+        "/rajsthan/14.png",
+        "/rajsthan/15.png",
+        "/rajsthan/c1.png",
+        "/rajsthan/7.png",
+        "/rajsthan/8.png",
+        "/rajsthan/9.png",
+        "/rajsthan/10.png",   
+      ],
+      folderImage: "/rajsthan/5.png",
+    },
+
+    "Surat Office": {
+      images: [
+        "/corporate/1-1.jpg",
+        "/corporate/2-1.jpg",
+        "/corporate/6-1.jpg",
+        "/corporate/7-1.jpg",
+        "/corporate/8-1.jpg",
+        "/corporate/9-1.jpg",
+      ],
+      folderImage: "/corporate/1.jpg",
+    },
+
+
+    "Home": {
+      images: [
+        "/home2/a13.png",
+        "/home2/b2.png",
+        "/home2/b3.png",
+        "/home2/dr1.png",
+        "/home2/dr10.png",
+        "/home2/dr1788.png",
+        "/home2/gym151.png",
+      ],
+      folderImage: "/home2/gym151.png",
     },
 
   };
@@ -769,7 +874,7 @@ export default function Projects() {
                 className="folder"
               >
                 <img src={folders[folder].folderImage} alt={`${folder} preview`} />
-                <p>{folder} <span style={{color: "grey", fontWeight:"lighter"}}>{folders[folder].images.length} </span> </p>
+                <p>{folder} <span style={{ color: "grey", fontWeight: "lighter" }}>{folders[folder].images.length} </span> </p>
               </div>
             ))}
           </div>
