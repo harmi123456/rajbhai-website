@@ -146,7 +146,7 @@ export default function Projects() {
     },
     "Swimming Pool": {
       description: "This is the swimming pool area, perfect for relaxation and recreation.",
-      image: "/img/Scene 8.jpg",
+      image: "/img/Scene 10_4.png",
     }
   };
 
@@ -840,6 +840,7 @@ export default function Projects() {
             </div>
           </Modal>
         )}
+
       </div>
 
 
@@ -855,6 +856,7 @@ export default function Projects() {
           {/* //first */}
 
           <div className="interactive-floor-plan">
+
             <div className="floor-plan-container">
               <img
                 src="/img/floor-plan.jpeg"
@@ -957,7 +959,7 @@ export default function Projects() {
               ></div>
               <div
                 className="hotspot-2"
-                style={{ top: "52%", left: "25%" }}
+                style={{ top: "46%", left: "39%" }}
                 onClick={() => handleHotspotClick_2("Kitchen")}
               ></div>
               <div
@@ -1107,7 +1109,7 @@ export default function Projects() {
             <h2>Contact Us</h2>
             <p>Email: contanct@rangragstudio.in</p>
             <p>Phone: +91 9328623606</p>
-            <p>Address: 203 possible Triangle, rajkot, Gujarat</p>
+            <p>Address: 203 Sanskar enclave, rajkot, Gujarat</p>
           </div>
 
           <div className="footer-newsletter">

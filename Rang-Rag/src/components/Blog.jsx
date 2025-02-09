@@ -254,7 +254,7 @@ export default function Blog() {
             <h2>Contact Us</h2>
             <p>Email: contanct@rangragstudio.in</p>
             <p>Phone: +91 9328623606</p>
-            <p>Address: 203 possible Triangle, rajkot, Gujarat</p>
+            <p>Address: 203 Sanskar enclave, rajkot, Gujarat</p>
           </div>
 
           <div className="footer-newsletter">

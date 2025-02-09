@@ -21,6 +21,10 @@
 
 }
 
+
+
+
+
 .loading {
   width: 94px;
   height: 54px;
@@ -1389,6 +1393,49 @@ header {
 
 
 @media (max-width: 768px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+
+    .bars {
+      display: block;
+      cursor: pointer;
+      width: 30%;
+      padding: 10px;
+    }
+
+    nav {
+      position: absolute;
+      top: 60px;
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      border: none;
+      left: 0;
+      width: 80%;
+      background-color: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .logo {
+      width: 30%;
+      /* width: auto; */
+    }
+
+    .icon {
+      width: 30%;
+    }
+  }
+
+  nav.show {
+    transform: translateX(0);
+  }
+
+
   .one_of_one {
     flex-direction: column;
     text-align: center;
@@ -1411,8 +1458,14 @@ header {
 
   .sec3 {
 
+    .Yt_links{
+      flex-direction: column;
+    }
+
     .youtube-link {
       margin-top: 20px;
+      width: 80%;
+      height: 600px;
     }
   }
 
@@ -1488,15 +1541,13 @@ body.no-scroll {
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    height: 500px;
+    height: 600px;
     z-index: 1;
   }
 
   .interactive-floor-plan-2 {
     display: flex;
     background-color: #f9f9f9;
-    position: relative;
-    top: 70px;
     justify-content: space-evenly;
     height: 550px;
     z-index: 1;

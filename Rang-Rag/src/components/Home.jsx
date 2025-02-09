@@ -95,12 +95,12 @@ export default function Home() {
     //video section
 
     const videos = [
-        // <iframe width="356" height="634" src="https://www.youtube.com/embed/idUIVrTEufg" title="Stunning Living Room &amp; Dining Area makeover ✨ #homfurniture #interior #interiordesign #home #dream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>,
-        "/videos/clip1.mp4",
-        "/videos/clip2.mp4", 
-        "/videos/clip3.mp4", 
-        "/videos/clip7.mp4", 
-        "/videos/clip8.mp4", 
+
+        <iframe type="text/html" src="https://www.youtube-nocookie.com/embed/zNk6LarvgR0?version=3&enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0&origin=http://www.youtube.com/&playsinline=1&start=1&end=235&autoplay=1&loop=1&mute=1&playlist=zNk6LarvgR0" width="100%" height="100%"
+            style={{ opacity: '1', width: '222.435%', height: '100%', position: 'absolute', top: '0', left: '-61.2176%', display: 'block', visibility: 'inherit' }}
+            id="iframe7495" data-gtm-yt-inspected-8="true" class="resizelistener" title="Stunning Exterior Animation Render with D5 Render | High-Quality Architectural Visualization">
+        </iframe>,
+
     ];
 
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -196,7 +196,7 @@ export default function Home() {
 
             </header>
 
-{/* 
+            {/* 
             <div className="home-sec1">
                 <h1>Step Inside RangRag intirior studio !!</h1>
 
@@ -204,24 +204,23 @@ export default function Home() {
                 <h1 >✨ Explore. Inspire. Create. ✨</h1>
             </div> */}
 
-            <div className="sec-1-vid" >
-
-                <div ref={videoContainerRef} className="video-container" >
-
+            <div className="sec-1-vid">
+                <div ref={videoContainerRef} className="video-container">
                     {videos.map((video, index) => (
-
                         <div key={index} className="video-show">
-                            <video height="100%" width="100%" autoPlay loop muted>
-                                <source src={video} type="video/mp4" />
-                            </video>
+                            {typeof video === "string" ? (
+                                // Render normal video file
+                                <video height="100%" width="100%" autoPlay loop muted>
+                                    <source src={video} type="video/mp4" />
+                                </video>
+                            ) : (
+                                // Render YouTube iframe directly
+                                video
+                            )}
                         </div>
-
                     ))}
-
-
                 </div>
             </div>
-
 
 
             <div className="sec2">
@@ -618,6 +617,7 @@ export default function Home() {
                         allowfullscreen
                     ></iframe>
 
+
                     <iframe
                         className="youtube-link"
                         width="auto"
@@ -726,7 +726,7 @@ export default function Home() {
                         <h2>Contact Us</h2>
                         <p>Email: contanct@rangragstudio.in</p>
                         <p>Phone: +91 9328623606</p>
-                        <p>Address: 203 possible Triangle, rajkot, Gujarat</p>
+                        <p>Address: 203 Sankar enclave, rajkot, Gujarat</p>
                     </div>
 
                     <div className="footer-newsletter">
