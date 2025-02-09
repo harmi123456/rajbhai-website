@@ -196,14 +196,6 @@ export default function Home() {
 
             </header>
 
-            {/* 
-            <div className="home-sec1">
-                <h1>Step Inside RangRag intirior studio !!</h1>
-
-                <p>Whether you’re planning a cozy home makeover or envisioning a luxurious commercial project, our expertise <br /> in modern interiors and cutting-edge 3D visualization ensures your design dreams become a reality.</p>
-                <h1 >✨ Explore. Inspire. Create. ✨</h1>
-            </div> */}
-
             <div className="sec-1-vid">
                 <div ref={videoContainerRef} className="video-container">
                     {videos.map((video, index) => (
