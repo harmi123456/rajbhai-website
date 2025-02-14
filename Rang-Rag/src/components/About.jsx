@@ -1,7 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import devtools from 'devtools-detect';
+
 
 export default function About() {
+
+  
+    //devTools for prevent source Code
+    if (devtools.isOpen) {
+      alert("Developer tools are open! Be careful. 🚨");
+  }
+
+  document.addEventListener('keydown', function (e) {
+      if (
+          e.key === 'F12' || 
+          (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+          (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+          (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
+      ) {
+          alert("DevTools access is restricted!");
+          e.preventDefault();
+      }
+  });
+  
+
+  
   const [isNavVisible, setNavVisible] = useState(false);
 
   const toggleNavbar = () => {

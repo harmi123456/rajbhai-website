@@ -1,7 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import devtools from 'devtools-detect';
 
 export default function Home() {
+
+
+    //devTools for prevent source Code
+    if (devtools.isOpen) {
+        alert("Developer tools are open! Be careful. 🚨");
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (
+            e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+            (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
+        ) {
+            alert("DevTools access is restricted!");
+            e.preventDefault();
+        }
+    });
+    
+
     const [isNavVisible, setNavVisible] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const [step, setStep] = useState(1);
@@ -96,9 +117,48 @@ export default function Home() {
 
     const videos = [
 
-        <iframe type="text/html" src="https://www.youtube-nocookie.com/embed/zNk6LarvgR0?version=3&enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0&origin=http://www.youtube.com/&playsinline=1&start=1&end=235&autoplay=1&loop=1&mute=1&playlist=zNk6LarvgR0" width="100%" height="100%"
-            style={{ opacity: '1', width: '222.435%', height: '100%', position: 'absolute', top: '0', left: '-61.2176%', display: 'block', visibility: 'inherit' }}
-            id="iframe7495" data-gtm-yt-inspected-8="true" class="resizelistener" title="Stunning Exterior Animation Render with D5 Render | High-Quality Architectural Visualization">
+        <iframe
+            width="915"
+            height="514"
+            style={{
+                opacity: '1',
+                width: '222.435%',
+                height: '100%',
+                position: 'absolute',
+                top: '0',
+                left: '-61.2176%',
+                display: 'block',
+                visibility: 'inherit'
+            }}
+            src="https://www.youtube.com/embed/?autoplay=1&loop=1&mute=1&playlist=zNk6LarvgR0"
+            title="Stunning Exterior Animation Render with D5 Render | High-Quality Architectural Visualization"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+
+        </iframe>,
+
+        <iframe
+            width="915"
+            height="514"
+            style={{
+                opacity: '1',
+                width: '222.435%',
+                height: '100%',
+                position: 'absolute',
+                top: '0',
+                left: '-61.2176%',
+                display: 'block',
+                visibility: 'inherit'
+            }}
+            src="https://www.youtube.com/embed/aKC0c2pcoL0?autoplay=1&loop=1&mute=1&playlist=aKC0c2pcoL0"
+            title="Stunning Exterior Walkthrough | 3D Architectural Visualization"
+
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+        >
         </iframe>,
 
     ];
