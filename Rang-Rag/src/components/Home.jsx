@@ -117,26 +117,26 @@ export default function Home() {
 
     const videos = [
 
-        <iframe
-            width="915"
-            height="514"
-            style={{
-                opacity: '1',
-                width: '222.435%',
-                height: '100%',
-                position: 'absolute',
-                top: '0',
-                left: '-61.2176%',
-                display: 'block',
-                visibility: 'inherit'
-            }}
-            src="https://www.youtube.com/embed/?autoplay=1&loop=1&mute=1&playlist=zNk6LarvgR0"
-            title="Stunning Exterior Animation Render with D5 Render | High-Quality Architectural Visualization"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-
+        <iframe 
+        width="914" 
+        height="514"
+        style={{
+            opacity: '1',
+            width: '222.435%',
+            height: '100%',
+            position: 'absolute',
+            top: '0',
+            left: '-61.2176%',
+            display: 'block',
+            visibility: 'inherit'
+        }}
+        src="https://www.youtube.com/embed/b6xJkZZJLxM?autoplay=1&loop=1&mute=1&playlist=b6xJkZZJLxM" 
+        title="Interior &amp; Exterior 3D Rendering | Best Architectural CGI Presentation" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        >
         </iframe>,
 
         <iframe
@@ -172,7 +172,7 @@ export default function Home() {
             if (currentVideoIndex < videos.length - 1) {
                 scrollToVideo(currentVideoIndex + 1);
             }
-        }, 5000);
+        }, 28000);
 
         return () => clearInterval(interval);
     }, [currentVideoIndex]);
@@ -211,9 +211,6 @@ export default function Home() {
 
         return () => container.removeEventListener("scroll", handleScroll);
     }, [currentVideoIndex]);
-
-
-
 
     return (
         <div id='sec1'>
@@ -256,7 +253,7 @@ export default function Home() {
 
             </header>
 
-            <div className="sec-1-vid">
+            <div className="sec-1-vid" style={{}}>
                 <div ref={videoContainerRef} className="video-container">
                     {videos.map((video, index) => (
                         <div key={index} className="video-show">
@@ -273,6 +270,10 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+
+
+
+
 
 
             <div className="sec2">
