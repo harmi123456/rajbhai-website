@@ -12,16 +12,16 @@ export default function Home() {
 
     document.addEventListener('keydown', function (e) {
         if (
-            e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-            (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-            (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.key === 'U')
         ) {
             alert("DevTools access is restricted!");
             e.preventDefault();
         }
     });
-    
+
 
     const [isNavVisible, setNavVisible] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -117,50 +117,57 @@ export default function Home() {
 
     const videos = [
 
-        <iframe 
-        width="914" 
-        height="514"
-        style={{
-            opacity: '1',
-            width: '222.435%',
-            height: '100%',
-            position: 'absolute',
-            top: '0',
-            left: '-61.2176%',
-            display: 'block',
-            visibility: 'inherit'
-        }}
-        src="https://www.youtube.com/embed/b6xJkZZJLxM?autoplay=1&loop=1&mute=1&playlist=b6xJkZZJLxM" 
-        title="Interior &amp; Exterior 3D Rendering | Best Architectural CGI Presentation" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen
-        >
-        </iframe>,
+        <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
+            <iframe
+                width="914"
+                height="514"
+                style={{
+                    opacity: '1',
+                    width: '222.435%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: '-0px',
 
-        <iframe
-            width="915"
-            height="514"
-            style={{
-                opacity: '1',
-                width: '222.435%',
-                height: '100%',
-                position: 'absolute',
-                top: '0',
-                left: '-61.2176%',
-                display: 'block',
-                visibility: 'inherit'
-            }}
-            src="https://www.youtube.com/embed/aKC0c2pcoL0?autoplay=1&loop=1&mute=1&playlist=aKC0c2pcoL0"
-            title="Stunning Exterior Walkthrough | 3D Architectural Visualization"
+                    left: '-61.2176%',
+                    display: 'block',
+                    visibility: 'inherit'
+                }}
+                src="https://www.youtube.com/embed/b6xJkZZJLxM?autoplay=1&loop=1&mute=1&playlist=b6xJkZZJLxM"
+                title="Interior &amp; Exterior 3D Rendering | Best Architectural CGI Presentation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            >
+            </iframe>,
+            <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", background: "transparent" }}></div>
+        </div>,
 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-        >
-        </iframe>,
 
+        <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
+            <iframe
+                width="915"
+                height="514"
+                style={{
+                    opacity: '1',
+                    width: '222.435%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: '0px',
+                    left: '-61.2176%',
+                    display: 'block',
+                    visibility: 'inherit'
+                }}
+                src="https://www.youtube.com/embed/aKC0c2pcoL0?autoplay=1&loop=1&mute=1&playlist=aKC0c2pcoL0"
+                title="Stunning Exterior Walkthrough | 3D Architectural Visualization"
+
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+            >
+            </iframe>,
+            <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", background: "transparent" }}></div>
+        </div>,
     ];
 
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -253,7 +260,7 @@ export default function Home() {
 
             </header>
 
-            <div className="sec-1-vid" style={{}}>
+            <div className="sec-1-vid" >
                 <div ref={videoContainerRef} className="video-container">
                     {videos.map((video, index) => (
                         <div key={index} className="video-show">
@@ -270,10 +277,6 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-
-
-
-
 
 
             <div className="sec2">
@@ -650,7 +653,7 @@ export default function Home() {
             {/* //YouTube Link */}
             <div className="sec3">
 
-                <h2 className="sec3-title">Watch Our Featured Video</h2>
+                <h1 className="sec3-title">Watch Our Featured Video</h1>
 
                 <p className="sec3-description">
                     Explore our latest interior design trends and projects in action!
@@ -658,78 +661,86 @@ export default function Home() {
 
                 <div className="Yt_links">
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/l6qmQw3Wdms?autoplay=1&loop=1&playlist=l6qmQw3Wdms&mute=1"
-                        title="Modern Living Room Interior Design | Stunning 3D Visualization Ideas for Your Home #home#homedesign"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/l6qmQw3Wdms?autoplay=1&loop=1&playlist=l6qmQw3Wdms&mute=1&controls=0&modestbranding=1&showinfo=0"
+                            title="YouTube video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/0wShAiKXd6k?autoplay=1&loop=1&playlist=0wShAiKXd6k&mute=1"
-                        title="Modern Bedroom Interior Design | Stunning 3D Visualization &amp; Decor Ideas #3dvisualization #home"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div className="iframe-container">
+                        <iframe
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/0wShAiKXd6k?autoplay=1&loop=1&playlist=0wShAiKXd6k&mute=1&controls=0&modestbranding=1&showinfo=0"
+                            title="Modern Bedroom Interior Design | Stunning 3D Visualization &amp; Decor Ideas #3dvisualization #home"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/GEkfH8Bjhv0?autoplay=1&loop=1&playlist=GEkfH8Bjhv0&mute=1"
-                        title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div className="iframe-container">
+                        <iframe
+                            className="youtube-link"
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/GEkfH8Bjhv0?autoplay=1&loop=1&playlist=GEkfH8Bjhv0&mute=1"
+                            title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/g-BIU2sPbQw?autoplay=1&loop=1&playlist=g-BIU2sPbQw&mute=1"
-                        title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div className="iframe-container">
+                        <iframe
+                            className="youtube-link"
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/g-BIU2sPbQw?autoplay=1&loop=1&playlist=g-BIU2sPbQw&mute=1"
+                            title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/_nJVACqt_8E?autoplay=1&loop=1&playlist=_nJVACqt_8E&mute=1"
-                        title="Stunning Exterior Walkthrough | 3D Architectural Visualization | Modern Exterior Design Tour"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div className="iframe-container">
+                        <iframe
+                            className="youtube-link"
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/_nJVACqt_8E?autoplay=1&loop=1&playlist=_nJVACqt_8E&mute=1"
+                            title="Stunning Exterior Walkthrough | 3D Architectural Visualization | Modern Exterior Design Tour"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-                    <iframe
-                        className="youtube-link"
-                        width="auto"
-                        height="auto"
-                        src="https://www.youtube.com/embed/0eX1GyYuxwU?autoplay=1&loop=1&playlist=0eX1GyYuxwU&mute=1"
-                        title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                    ></iframe>
+                    <div className="iframe-container">
+                        <iframe
+                            className="youtube-link"
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/0eX1GyYuxwU?autoplay=1&loop=1&playlist=0eX1GyYuxwU&mute=1"
+                            title="Stunning Interior Walkthrough | 3D Architectural Visualization | Modern Interior Design Tour"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
                 </div>
 

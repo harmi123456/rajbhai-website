@@ -553,18 +553,23 @@ header {
     justify-content: space-evenly;
   }
 
-  .youtube-link {
-    text-decoration: none;
-    height: 400px;
-    width: 15%;
-    border-radius: 8px;
+
+  .iframe-container {
+    position: relative;
+    width: 200px;
+    height: 340px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
   }
 
-  .youtube-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  .iframe-container iframe {
+    position: absolute;
+    top: -280px;
+    left: 0;
+    margin-top: 200px;
+    width: 200px;
+    height: 500px;
+    border: none;
   }
 
 
@@ -1458,7 +1463,7 @@ header {
 
   .sec3 {
 
-    .Yt_links{
+    .Yt_links {
       flex-direction: column;
     }
 
@@ -3166,10 +3171,11 @@ body.no-scroll {
   outline: none;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0;
 }
-.touch-img{
+
+.touch-img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3186,12 +3192,12 @@ body.no-scroll {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3206,11 +3212,11 @@ body.no-scroll {
 }
 
 .arrow-buttons:active {
-  transform: translateY(-50%) scale(0.95); 
+  transform: translateY(-50%) scale(0.95);
 }
 
 .arrow-buttons i {
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .arrow-buttons.left {
@@ -3218,7 +3224,7 @@ body.no-scroll {
 }
 
 .arrow-buttons.right {
-  right: 10px; 
+  right: 10px;
 }
 
 
@@ -3268,14 +3274,16 @@ body.no-scroll {
 
 @media (max-width: 400px) {
 
-  .folder{
+  .folder {
     height: 200px;
     width: 160px;
   }
-  .folder img{
+
+  .folder img {
     height: 70%;
     width: 100%;
   }
+
   .folder p {
     margin: 3px;
   }
@@ -3288,15 +3296,17 @@ body.no-scroll {
 
 @media (max-width: 500px) {
 
-  .folder{
+  .folder {
     height: 200px;
     width: 160px;
     /* border: 2px solid; */
   }
-  .folder img{
+
+  .folder img {
     height: 70%;
     width: 100%;
   }
+
   .folder p {
     margin: 3px;
   }
@@ -3308,30 +3318,31 @@ body.no-scroll {
 }
 
 
-.sec-1-vid{
+.sec-1-vid {
   height: 100vh;
   overflow: hidden;
 
-  iframe{
+  iframe {
     width: 100%;
     height: 100%;
   }
-  .video-container{
+
+  .video-container {
     height: 100vh;
     overflow: scroll;
-    scroll-snap-type:y mandatory;
+    scroll-snap-type: y mandatory;
   }
 
   .video-show {
-    height: 100vh; 
-    width: 100vw;  
+    height: 100vh;
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
   }
-  
+
   .video-show video {
     height: 100%;
     width: 100%;
@@ -3339,6 +3350,6 @@ body.no-scroll {
     position: sticky;
     top: 0;
   }
-  
-  
+
+
 }
