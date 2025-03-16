@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Blog from './components/Blog';
 import Loder from './components/Loding';
 import Loding from './components/Loding';
+import Vr from './components/vr';
 
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
                 <Routes>
                   <Route path='/' element={<Home />}></Route>
                   <Route path='/projects' element={<Projects />}></Route>
+                  <Route path='/vr' element={<Vr/>} ></Route>
                   <Route path='/services' element={<Services />} ></Route>
                   <Route path='/aboutUs' element={<About />}></Route>
                   <Route path='/blog' element={<Blog />}></Route>
