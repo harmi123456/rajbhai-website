@@ -6,26 +6,26 @@ import devtools from 'devtools-detect';
 
 export default function Projects() {
 
-  
-    //devTools for prevent source Code
-    if (devtools.isOpen) {
-      alert("Developer tools are open! Be careful. 🚨");
+
+  //devTools for prevent source Code
+  if (devtools.isOpen) {
+    alert("Developer tools are open! Be careful. 🚨");
   }
 
   document.addEventListener('keydown', function (e) {
-      if (
-          e.key === 'F12' || 
-          (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-          (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-          (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
-      ) {
-          alert("DevTools access is restricted!");
-          e.preventDefault();
-      }
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+      (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
+    ) {
+      alert("DevTools access is restricted!");
+      e.preventDefault();
+    }
   });
-  
 
-  
+
+
   const [isNavVisible, setNavVisible] = useState(false);
 
 
@@ -601,7 +601,7 @@ export default function Projects() {
 
   const folders = {
 
-    AhmedabadHaven : {
+    AhmedabadHaven: {
       images: [
         "/residential/pr-1-2bhk.png",
         "/residential/pr-2-2bhk.png",
@@ -653,7 +653,7 @@ export default function Projects() {
       folderImage: "/residential/pr-bar-1 (7).png"
     },
 
-    VadodaraBizNest : {
+    VadodaraBizNest: {
       images: [
         "/corporate/r-1.jpg",
         "/corporate/r-2.jpg",
@@ -698,7 +698,7 @@ export default function Projects() {
     },
 
 
-    HavenX : {
+    HavenX: {
       images: [
         "/home/1.png",
         "/home/2.png",
@@ -716,7 +716,7 @@ export default function Projects() {
     },
 
 
-    ZenNest : {
+    ZenNest: {
       images: [
         "/home2/1.png",
         "/home2/3.png",
@@ -753,12 +753,12 @@ export default function Projects() {
         "/rajsthan/7.png",
         "/rajsthan/8.png",
         "/rajsthan/9.png",
-        "/rajsthan/10.png",   
+        "/rajsthan/10.png",
       ],
       folderImage: "/rajsthan/5.png",
     },
 
-    SuratHub : {
+    SuratHub: {
       images: [
         "/corporate/1-1.jpg",
         "/corporate/2-1.jpg",
@@ -771,7 +771,7 @@ export default function Projects() {
     },
 
 
-    Homix : {
+    Homix: {
       images: [
         "/home2/a13.png",
         "/home2/b2.png",
@@ -859,6 +859,7 @@ export default function Projects() {
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/'>Home</Link>
           <Link to='/projects' style={{ color: 'green', fontWeight: 'bold' }}>Projects</Link>
+          <Link to='https://virtualtour-blond.vercel.app/' >Virtual Tour</Link>
           <Link to='/services'>Services</Link>
           <Link to='/aboutUs'>About Us</Link>
           <Link to='/blog'>Blog</Link>
@@ -881,6 +882,22 @@ export default function Projects() {
         </div>
 
       </header>
+
+      <div className="virtual mt-5 mb-5">
+
+        <a href="https://vr1-nu.vercel.app/">
+          <div className="tour">
+            <img src="/img/museum.png" alt="" />
+          </div>
+        </a>
+
+        <a href="https://virtualtour-blond.vercel.app/">
+        <div className="tour">
+            <img src="/img/exterior.png" alt="" />
+          </div>
+        </a>
+
+      </div>
 
 
       <div className="gallery-container">

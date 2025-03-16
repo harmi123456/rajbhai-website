@@ -5,26 +5,26 @@ import devtools from 'devtools-detect';
 
 export default function About() {
 
-  
-    //devTools for prevent source Code
-    if (devtools.isOpen) {
-      alert("Developer tools are open! Be careful. 🚨");
+
+  //devTools for prevent source Code
+  if (devtools.isOpen) {
+    alert("Developer tools are open! Be careful. 🚨");
   }
 
   document.addEventListener('keydown', function (e) {
-      if (
-          e.key === 'F12' || 
-          (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-          (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-          (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
-      ) {
-          alert("DevTools access is restricted!");
-          e.preventDefault();
-      }
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+      (e.ctrlKey && e.key === 'U') // Prevents "View Page Source" (Ctrl + U)
+    ) {
+      alert("DevTools access is restricted!");
+      e.preventDefault();
+    }
   });
-  
 
-  
+
+
   const [isNavVisible, setNavVisible] = useState(false);
 
   const toggleNavbar = () => {
@@ -91,6 +91,7 @@ export default function About() {
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/'>Home</Link>
           <Link to='/projects'>Projects</Link>
+          <Link to='https://virtualtour-blond.vercel.app/' >Virtual Tour</Link>
           <Link to='/services'>Services</Link>
           <Link to='/aboutUs' style={{ color: 'green', fontWeight: 'bold' }}>About Us</Link>
           <Link to='/blog'>Blog</Link>
