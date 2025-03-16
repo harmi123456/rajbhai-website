@@ -747,7 +747,7 @@ export default function Home() {
             </div>
 
 
-            <div className="sec8 ">
+            {/* <div className="sec8 ">
 
                 <div className="image_insta button button2">
                     <img src="/img/40.jpg" alt="Instagram" />
@@ -762,7 +762,7 @@ export default function Home() {
                     <img src="/img/44.jpg" alt="" />
                 </div>
 
-            </div>
+            </div> */}
 
 
             <footer className="footer">
