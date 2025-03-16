@@ -747,7 +747,7 @@ export default function Home() {
             </div>
 
 
-            <div className="sec8">
+            <div className="sec8 ">
 
                 <div className="image_insta button button2">
                     <img src="/img/40.jpg" alt="Instagram" />
@@ -817,6 +817,7 @@ export default function Home() {
                 </div>
             </footer>
 
+
             <div className="parent-div">
 
                 {/* Divs to show/hide */}
@@ -843,6 +844,7 @@ export default function Home() {
             <div className="up">
                 <a href="#sec1"><img src="/img/chervon.png" alt="" /></a>
             </div>
+
 
         </div>
     )
