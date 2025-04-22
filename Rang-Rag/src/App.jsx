@@ -39,8 +39,6 @@ export default function App() {
                   <Route path='/aboutUs' element={<About />}></Route>
                   <Route path='/blog' element={<Blog />}></Route>
                   <Route path='/ContactUs' element={<Contact />}></Route>
-                  <Route path='/vr' element={<Vr/>}></Route>
-                  <Route path='/vr2' element={<Vr2/>}></Route>
                 </Routes>
               </BrowserRouter>
             </div>

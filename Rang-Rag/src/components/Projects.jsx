@@ -887,17 +887,16 @@ export default function Projects() {
 
       <div className="virtual mt-5 mb-5">
 
-        <Link to='/vr2' >
+      
           <div className="tour">
             <img src="/img/museum.png" alt="" />
           </div>
-        </Link>
+     
 
-        <Link to='/vr'>
           <div className="tour">
             <img src="/img/exterior.png" alt="" />
           </div>
-        </Link>
+ 
 
 
       </div>

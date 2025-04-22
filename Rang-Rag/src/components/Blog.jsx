@@ -89,7 +89,6 @@ export default function Blog() {
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/' >Home</Link>
           <Link to='/projects'>Projects</Link>
-          <Link to='/vr' >Virtual Tour</Link>
           <Link to='/services'>Services</Link>
           <Link to='/aboutUs'>About us</Link>
           <Link to='/blog' style={{ color: 'green', fontWeight: 'bold' }}>Blog</Link>
