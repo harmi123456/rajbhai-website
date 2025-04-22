@@ -86,7 +86,7 @@ export default function Vr2() {
             </header>
 
             <iframe
-                src="https://vr1-nu.vercel.app/"
+                // src="https://vr1-nu.vercel.app/"
                 width="100%"
                 height="600px"
                 style={{ border: 'none' }}

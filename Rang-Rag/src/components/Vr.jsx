@@ -86,7 +86,7 @@ export default function Vr() {
             </header>
 
             <iframe
-                src="https://virtualtour-blond.vercel.app/"
+                // src="https://virtualtour-blond.vercel.app/"
                 width="100%"
                 height="600px"
                 style={{ border: 'none' }}
