@@ -1,24 +1,35 @@
-import devTools from 'devtools-detect';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import devTools from 'devtools-detect';
 
 export default function Vr() {
     const [isNavVisible, setNavVisible] = useState(false);
+    const [showIcons, setShowIcons] = useState(false);
+    const phoneNumber = "919328623606";
 
     const toggleNavbar = () => {
         setNavVisible(!isNavVisible);
     };
 
+    const toggleIcons = () => {
+        setShowIcons(!showIcons);
+    };
+
+    const openWhatsApp = () => {
+        window.open(`https://wa.me/${phoneNumber}`, "_blank");
+    };
+
+    const makeCall = () => {
+        window.location.href = `tel:${phoneNumber}`;
+    };
+
     useEffect(() => {
-        // Scroll to top on mount
         window.scrollTo(0, 0);
 
-        // Alert if dev tools are already open
-        if (devTools.isOpen) {
+        if (typeof window !== "undefined" && process.env.NODE_ENV === "development" && devTools.isOpen) {
             alert("Developer tools are open! Be careful. 🚨");
         }
 
-        // Keydown handler to restrict dev tools
         const handleKeyDown = (e) => {
             if (
                 e.key === 'F12' ||
@@ -32,37 +43,14 @@ export default function Vr() {
         };
 
         document.addEventListener('keydown', handleKeyDown);
-
-        // Clean up listener on unmount
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
-
-    //WhatsApp icons
-    const phoneNumber = "919328623606";
-
-    const openWhatsApp = () => {
-        const url = `https://wa.me/${phoneNumber}`;
-        window.open(url, "_blank");
-    };
-
-    const makeCall = () => {
-        window.location.href = `tel:${phoneNumber}`;
-    };
-
-
-    const [showIcons, setShowIcons] = useState(false);
-
-    const toggleIcons = () => {
-        setShowIcons(!showIcons);
-    };
-
     return (
         <div>
             <header>
-
                 <div className="bars" onClick={toggleNavbar}>
                     <i className="fa-solid fa-bars-staggered"></i>
                 </div>
@@ -72,35 +60,31 @@ export default function Vr() {
                 </div>
 
                 <nav className={isNavVisible ? 'show' : ''}>
-                    <Link to='/'>Home</Link>
-                    <Link to='/projects'>Projects</Link>
-                    <Link to='/vr' style={{ color: 'green', fontWeight: 'bold' }}>Virtual Tour</Link>
-                    <Link to='/services'>Services</Link>
-                    <Link to='/aboutUs'>About us</Link>
-                    <Link to='/blog'>Blog</Link>
-                    <Link to='/contactUs'>Contact us</Link>
+                    <Link to="/">Home</Link>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/vr" style={{ color: 'green', fontWeight: 'bold' }}>Virtual Tour</Link>
+                    <Link to="/services">Services</Link>
+                    <Link to="/aboutUs">About us</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/contactUs">Contact us</Link>
                 </nav>
 
                 <div className="icon">
-
-                    <a href="https://www.instagram.com/rangrag_studio?igsh=MWljc3U0YnZvenlteQ==" target='_blank'>
-                        <div className='insta'><i class="fa-brands fa-instagram"></i></div>
+                    <a href="https://www.instagram.com/rangrag_studio" target="_blank" rel="noopener noreferrer">
+                        <div className="insta"><i className="fa-brands fa-instagram"></i></div>
                     </a>
-                    <a href="https://www.facebook.com/people/RangRag-Interior-Design-Studio/61561135798667/" target='_blank'>
-                        <div className="insta"><i class="fa-brands fa-facebook-f"></i></div>
+                    <a href="https://www.facebook.com/people/RangRag-Interior-Design-Studio/61561135798667/" target="_blank" rel="noopener noreferrer">
+                        <div className="insta"><i className="fa-brands fa-facebook-f"></i></div>
                     </a>
-                    <a href="https://www.linkedin.com/company/rangrag-studio/" target='_blank'>
-                        <div className="insta"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <a href="https://www.linkedin.com/company/rangrag-studio/" target="_blank" rel="noopener noreferrer">
+                        <div className="insta"><i className="fa-brands fa-linkedin-in"></i></div>
                     </a>
-                    <a href="https://youtube.com/@rangraginterior?si=ysiDjGfY8xrtHrgY" target='_blank'>
-                        <div className="insta"><i class="fa-brands fa-youtube"></i></div>
+                    <a href="https://youtube.com/@rangraginterior" target="_blank" rel="noopener noreferrer">
+                        <div className="insta"><i className="fa-brands fa-youtube"></i></div>
                     </a>
-
                 </div>
-
             </header>
 
-            {/* Embedded Virtual Tour */}
             <iframe
                 src="https://virtualtour-blond.vercel.app/"
                 width="100%"
@@ -110,25 +94,20 @@ export default function Vr() {
                 title="Virtual Tour"
             />
 
-
             <footer className="footer">
                 <div className="footer-container">
-
                     <div className="footer-about">
                         <h2>About Us</h2>
-                        <p>
-                            We specialize in creating unique and stunning interior designs that transform your spaces into luxurious and comfortable havens.
-                        </p>
+                        <p>We specialize in creating unique and stunning interior designs that transform your spaces into luxurious and comfortable havens.</p>
                     </div>
 
                     <div className="footer-links">
                         <h2>Quick Links</h2>
                         <ul>
-                            <li><Link to='/projects'>PROJECTS</Link></li>
-                            <li><Link to='/services'>SERVICES</Link></li>
-                            <li><Link to='/aboutUs'>AboutUs</Link> </li>
-                            <li> <Link to='/contactUs'>ContactUs</Link></li>
-
+                            <li><Link to="/projects">PROJECTS</Link></li>
+                            <li><Link to="/services">SERVICES</Link></li>
+                            <li><Link to="/aboutUs">AboutUs</Link></li>
+                            <li><Link to="/contactUs">ContactUs</Link></li>
                         </ul>
                     </div>
 
@@ -136,7 +115,7 @@ export default function Vr() {
                         <h2>Contact Us</h2>
                         <p>Email: contanct@rangragstudio.in</p>
                         <p>Phone: +91 9328623606</p>
-                        <p>Address: 203 Sankar enclave, rajkot, Gujarat</p>
+                        <p>Address: 203 Sankar enclave, Rajkot, Gujarat</p>
                     </div>
 
                     <div className="footer-newsletter">
@@ -152,45 +131,32 @@ export default function Vr() {
                 <div className="footer-bottom">
                     <p>&copy; 2024 Interior Design Co. All Rights Reserved.</p>
                     <div className="footer-social">
-
-                        <a href="https://www.instagram.com/rangrag_studio?igsh=MWljc3U0YnZvenlteQ==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/rangrag_studio" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/people/RangRag-Interior-Design-Studio/61561135798667/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/rangrag-studio/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://youtube.com/@rangraginterior?si=ysiDjGfY8xrtHrgY" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://www.justdial.com/Rajkot/Rangrag-Studio-Near-Haridarshan-School-Mavdi/0281PX281-X281-240707141959-Z2N8_BZDET?catid=&checkin=&checkout=&vpfs=&stxt=%20Interior%203D%20Visualization%20Services&nid=11466419&stype=category_list&search=Interior-3D-Visualization-Services&area=Near%20Haridarshan%20School%20Mavdi&type=Architectural%20Walkthroughs&totalJdReviews=undefined&bdmsgtype=7&bdcaptiontype=6&bdpage=rsltpge&slectedDimgTag=&show_open_abd=0" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google"></i></a>
-
+                        <a href="https://www.linkedin.com/company/rangrag-studio/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@rangraginterior" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.justdial.com/Rajkot/.../" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-google"></i></a>
                     </div>
                 </div>
             </footer>
 
-
             <div className="parent-div">
-
-                {/* Divs to show/hide */}
                 {showIcons && (
-
                     <div className="h-icons">
-                        <div className="hidden-icons" onClick={makeCall}>
-                            <i className="fa fa-phone"></i>
-                        </div>
-                        <div className="hidden-icons" onClick={openWhatsApp}>
-                            <i className="fa-brands fa-whatsapp"></i>
-                        </div>
+                        <div className="hidden-icons" onClick={makeCall}><i className="fa fa-phone"></i></div>
+                        <div className="hidden-icons" onClick={openWhatsApp}><i className="fa-brands fa-whatsapp"></i></div>
                     </div>
-
                 )}
 
                 <div className="icon-div" onClick={toggleIcons}>
-                    <i className="fa-brands fa-whatsapp  whatsapp-icon"></i>
+                    <i className="fa-brands fa-whatsapp whatsapp-icon"></i>
                     <i className="fa fa-phone call-icon"></i>
                 </div>
-
             </div>
 
             <div className="up">
-                <a href="#sec1"><img src="/img/chervon.png" alt="" /></a>
+                <a href="#sec1"><img src="/img/chervon.png" alt="Up arrow" /></a>
             </div>
-
         </div>
     );
 }
