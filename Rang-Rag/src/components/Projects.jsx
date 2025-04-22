@@ -853,20 +853,21 @@ export default function Projects() {
         </div>
 
         <div className="logo">
-          <img src="/img/logo.png" alt="" />
+          <img src="/img/logo.png" alt="Protected" />
         </div>
 
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/'>Home</Link>
           <Link to='/projects' style={{ color: 'green', fontWeight: 'bold' }}>Projects</Link>
-          <Link to='https://virtualtour-blond.vercel.app/' >Virtual Tour</Link>
+          <Link to='/vr' >Virtual Tour</Link>
           <Link to='/services'>Services</Link>
-          <Link to='/aboutUs'>About Us</Link>
+          <Link to='/aboutUs'>About us</Link>
           <Link to='/blog'>Blog</Link>
-          <Link to='/contactUs'>Contact Us</Link>
+          <Link to='/contactUs'>Contact us</Link>
         </nav>
 
         <div className="icon">
+
           <a href="https://www.instagram.com/rangrag_studio?igsh=MWljc3U0YnZvenlteQ==" target='_blank'>
             <div className='insta'><i class="fa-brands fa-instagram"></i></div>
           </a>
@@ -879,20 +880,21 @@ export default function Projects() {
           <a href="https://youtube.com/@rangraginterior?si=ysiDjGfY8xrtHrgY" target='_blank'>
             <div className="insta"><i class="fa-brands fa-youtube"></i></div>
           </a>
+
         </div>
 
       </header>
 
       <div className="virtual mt-5 mb-5">
 
-        <a href="https://vr1-nu.vercel.app/">
+        <Link to='/vr2' >
           <div className="tour">
             <img src="/img/museum.png" alt="" />
           </div>
-        </a>
+        </Link>
 
-        <a href="https://virtualtour-blond.vercel.app/">
-        <div className="tour">
+        <a href="/vr">
+          <div className="tour">
             <img src="/img/exterior.png" alt="" />
           </div>
         </a>

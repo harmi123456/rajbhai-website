@@ -236,7 +236,7 @@ export default function Home() {
                 <nav className={isNavVisible ? 'show' : ''}>
                     <Link to='/' style={{ color: 'green', fontWeight: 'bold' }}>Home</Link>
                     <Link to='/projects'>Projects</Link>
-                    <Link to='https://virtualtour-blond.vercel.app/' >Virtual Tour</Link>
+                    <Link to='/vr' >Virtual Tour</Link>
                     <Link to='/services'>Services</Link>
                     <Link to='/aboutUs'>About us</Link>
                     <Link to='/blog'>Blog</Link>

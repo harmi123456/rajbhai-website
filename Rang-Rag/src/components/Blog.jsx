@@ -83,20 +83,21 @@ export default function Blog() {
         </div>
 
         <div className="logo">
-          <img src="/img/logo.png" alt="" />
+          <img src="/img/logo.png" alt="Protected" />
         </div>
 
         <nav className={isNavVisible ? 'show' : ''}>
-          <Link to='/'>Home</Link>
+          <Link to='/' >Home</Link>
           <Link to='/projects'>Projects</Link>
-          <Link to='https://virtualtour-blond.vercel.app/' >Virtual Tour</Link>
+          <Link to='/vr' >Virtual Tour</Link>
           <Link to='/services'>Services</Link>
-          <Link to='/aboutUs'>About Us</Link>
-          <Link to='/blog' style={{ color: 'green', fontWeight: 'bold' }} >Blog</Link>
-          <Link to='/contactUs'>Contact Us</Link>
+          <Link to='/aboutUs'>About us</Link>
+          <Link to='/blog' style={{ color: 'green', fontWeight: 'bold' }}>Blog</Link>
+          <Link to='/contactUs'>Contact us</Link>
         </nav>
 
         <div className="icon">
+
           <a href="https://www.instagram.com/rangrag_studio?igsh=MWljc3U0YnZvenlteQ==" target='_blank'>
             <div className='insta'><i class="fa-brands fa-instagram"></i></div>
           </a>
@@ -109,6 +110,7 @@ export default function Blog() {
           <a href="https://youtube.com/@rangraginterior?si=ysiDjGfY8xrtHrgY" target='_blank'>
             <div className="insta"><i class="fa-brands fa-youtube"></i></div>
           </a>
+
         </div>
 
       </header>

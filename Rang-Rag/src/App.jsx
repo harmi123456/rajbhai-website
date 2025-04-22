@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Blog from './components/Blog';
 import Loder from './components/Loding';
 import Loding from './components/Loding';
+import Vr from './components/vr';
+import Vr2 from './components/Vr2';
 
 
 export default function App() {
@@ -38,6 +40,9 @@ export default function App() {
                   <Route path='/aboutUs' element={<About />}></Route>
                   <Route path='/blog' element={<Blog />}></Route>
                   <Route path='/ContactUs' element={<Contact />}></Route>
+                  <Route path='/vr' element={<Vr/>}></Route>
+                  {/* <Route path='/projects/vr' element={<Vr/>}></Route> */}
+                  <Route path='/vr2' element={<Vr2/>}></Route>
                 </Routes>
               </BrowserRouter>
             </div>
