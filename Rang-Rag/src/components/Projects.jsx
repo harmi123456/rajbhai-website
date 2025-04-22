@@ -859,7 +859,7 @@ export default function Projects() {
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/'>Home</Link>
           <Link to='/projects' style={{ color: 'green', fontWeight: 'bold' }}>Projects</Link>
-          <Link to='/vr' >Virtual Tour</Link>
+
           <Link to='/services'>Services</Link>
           <Link to='/aboutUs'>About us</Link>
           <Link to='/blog'>Blog</Link>
@@ -893,11 +893,12 @@ export default function Projects() {
           </div>
         </Link>
 
-        <a href="/vr">
+        <Link to='/vr'>
           <div className="tour">
             <img src="/img/exterior.png" alt="" />
           </div>
-        </a>
+        </Link>
+
 
       </div>
 
