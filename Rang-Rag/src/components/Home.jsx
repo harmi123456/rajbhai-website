@@ -1,26 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import devtools from 'devtools-detect';
+// import devtools from 'devtools-detect';
 
 export default function Home() {
 
 
     //devTools for prevent source Code
-    if (devtools.isOpen) {
-        alert("Developer tools are open! Be careful. 🚨");
-    }
+    // if (devtools.isOpen) {
+    //     alert("Developer tools are open! Be careful. 🚨");
+    // }
 
-    document.addEventListener('keydown', function (e) {
-        if (
-            e.key === 'F12' ||
-            (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-            (e.ctrlKey && e.key === 'U')
-        ) {
-            alert("DevTools access is restricted!");
-            e.preventDefault();
-        }
-    });
+    // document.addEventListener('keydown', function (e) {
+    //     if (
+    //         e.key === 'F12' ||
+    //         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+    //         (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+    //         (e.ctrlKey && e.key === 'U')
+    //     ) {
+    //         alert("DevTools access is restricted!");
+    //         e.preventDefault();
+    //     }
+    // });
 
 
     const [isNavVisible, setNavVisible] = useState(false);
@@ -96,21 +96,21 @@ export default function Home() {
 
 
     //privacy
-    useEffect(() => {
-        // Disable right-click
-        const handleContextMenu = (e) => {
-            e.preventDefault();
-            alert("🔒 Content Protected!");
-        };
+    // useEffect(() => {
+    //     // Disable right-click
+    //     const handleContextMenu = (e) => {
+    //         e.preventDefault();
+    //         alert("🔒 Content Protected!");
+    //     };
 
-        document.addEventListener("contextmenu", handleContextMenu);
+    //     document.addEventListener("contextmenu", handleContextMenu);
 
 
-        return () => {
-            document.removeEventListener("contextmenu", handleContextMenu);
-        };
+    //     return () => {
+    //         document.removeEventListener("contextmenu", handleContextMenu);
+    //     };
 
-    }, []);
+    // }, []);
 
 
     //video section
