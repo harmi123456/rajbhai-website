@@ -6,9 +6,6 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
-import Loding from './components/Loding';
-import Vr from './components/vr';
-import Vr2 from './components/Vr2';
 
 
 export default function App() {
@@ -25,11 +22,7 @@ export default function App() {
 
   return (
     <div>
-      {
-        loading ? (
-          <Loding/>
-        ) :
-          (
+    
             <div className="fade-in">
               <BrowserRouter>
                 <Routes>
@@ -42,8 +35,7 @@ export default function App() {
                 </Routes>
               </BrowserRouter>
             </div>
-          )
-      }
+      
     </div>
   )
 }

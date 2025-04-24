@@ -859,7 +859,6 @@ export default function Projects() {
         <nav className={isNavVisible ? 'show' : ''}>
           <Link to='/'>Home</Link>
           <Link to='/projects' style={{ color: 'green', fontWeight: 'bold' }}>Projects</Link>
-
           <Link to='/services'>Services</Link>
           <Link to='/aboutUs'>About us</Link>
           <Link to='/blog'>Blog</Link>
@@ -885,9 +884,8 @@ export default function Projects() {
 
       </header>
 
-      <div className="virtual mt-5 mb-5">
+      {/* <div className="virtual mt-5 mb-5">
 
-      
           <div className="tour">
             <img src="/img/museum.png" alt="" />
           </div>
@@ -896,10 +894,8 @@ export default function Projects() {
           <div className="tour">
             <img src="/img/exterior.png" alt="" />
           </div>
- 
 
-
-      </div>
+      </div> */}
 
 
       <div className="gallery-container">
